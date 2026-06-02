@@ -1,4 +1,4 @@
-def run() {
+def executeMessage() {
     echo "RCB are the champions of 2026"
 }
 
