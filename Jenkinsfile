@@ -1,5 +1,3 @@
-def externalScript = load 'newfile.groovy'
-
 pipeline {
     agent any
 
@@ -7,6 +5,7 @@ pipeline {
         stage('Execute External Script') {
             steps {
                 script {
+                    def externalScript = load 'newfile.groovy'
                     externalScript.run()
                 }
             }
