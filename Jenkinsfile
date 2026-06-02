@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     def externalScript = load 'newfile.groovy'
-                    externalScript.run()
+                    externalScript.executeMessage()
                 }
             }
         }
