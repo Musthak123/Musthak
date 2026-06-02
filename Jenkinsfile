@@ -7,5 +7,10 @@ pipeline {
                 echo 'Hello from GitHub'
             }
         }
+        stage('Build') {
+            steps {
+                echo "Build is successful"
+            }
+        }
     }
 }
