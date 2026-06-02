@@ -1,15 +1,14 @@
+def externalScript = load 'newfile.groovy'
+
 pipeline {
     agent any
 
     stages {
-        stage('Test') {
+        stage('Execute External Script') {
             steps {
-                echo 'Hello from GitHub'
-            }
-        }
-        stage('Build') {
-            steps {
-                echo "Build is successful"
+                script {
+                    externalScript.run()
+                }
             }
         }
     }
