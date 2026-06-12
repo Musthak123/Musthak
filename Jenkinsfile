@@ -2,11 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Execute External Script') {
+        stage('Build') {
             steps {
                 script {
-                    def externalScript = load 'newfile.groovy'
-                    externalScript.executeMessage()
+                    echo "Welcome to my world"
                 }
             }
         }
